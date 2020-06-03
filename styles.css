@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css?family=Inter:400,700&display=swap');
+
+body {
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  color: var(--main-font1);
+  font-weight: 525;
+  transition: all 0.3s linear;
+  background: var(--main-background);
+  background: linear-gradient( var(--second-background) 250px, var(--main-background) 0%);
+
+}
+.container {
+  margin: 0 auto;
+  max-width: 60%;
+}
+.dark {
+--main-background: hsl(230, 17%, 14%);
+--second-background: hsl(232, 19%, 15%);
+--hover: hsl(228, 28%, 30%);
+--title-font: white;
+--card-bg: hsl(228, 28%, 20%);
+--main-font1: hsl(228, 34%, 66%);
+--main-font2: hsl(0, 0%, 100%);
+}
+.light {
+--main-background: hsl(0, 0%, 100%);
+--second-background: hsl(225, 100%, 98%);
+--hover: hsl(227, 47%, 91%);
+--title-font: black;
+--card-bg: hsl(227, 47%, 96%);
+--main-font1: hsl(228, 12%, 44%);
+--main-font2: hsl(230, 17%, 14%);
+}
+/* FIRST CONTAINER------------------ */
+.firstContainer {
+  display:grid;
+  grid-template-columns: 50% 50%;
+}
+.boxSwitchTheme {
+margin-right:1rem;
+margin-left:1rem;
+display:inline-grid;
+grid-template-columns: auto auto;
+justify-content: flex-end;
+align-items: center;
+
+}
+
+.mainTitle {
+  margin-left: 1rem;
+  color: var(--title-font);
+}
+/* SECOND CONTAINER ------------------- */
+.secondContainer {
+  margin-top:1rem;
+  display:grid;
+  grid-template-columns: 25% 25% 25% 25%;
+
+}
+.secondContainer div {
+    margin: 1rem;
+}
+.followers {
+margin-left: 1rem;
+}
+.textDM {
+  color: var(--main-font1);
+  font-size: 1.6em;
+  font-weight: 400;
+  
+}
+
+/* SWITCH BUTTON -----------------------------------------------------------------*/
+
+ /* The switch - the box around the slider */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--main-font1);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--second-background);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+   background: linear-gradient(90grad, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+} 
+/* ----------- ------------------------------------------------------------------------*/
+
+
+.card {
+    border: none;
+  background-color: var(--card-bg);
+  /* height: 200px; */
+  border-top:5px solid transparent;
+  border-radius: 3%;
+}
+.card:hover {
+  background-color: var(--hover);
+  cursor: pointer;
+}
+
+
+
+.card1 {
+  position:relative;
+    /* border-top-color: hsl(208, 92%, 53%) ; */
+}
+.card1:before {
+    content: "";
+    display: block;
+    background: hsl(203, 89%, 53%);
+    height: 5px;
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+.card2 {
+  position:relative;
+  /* border-top-color:  hsl(203, 89%, 53%); */
+}
+.card2:before {
+      content: "";
+    display: block;
+    background:  hsl(208, 92%, 53%);
+    height: 5px;
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+.card3 {
+    position: relative;
+}
+.card3:before {
+    content: "";
+    display: block;
+    background-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    height: 5px;
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+.card4 {
+    position: relative;
+  /* border-top-color:  hsl(348, 97%, 39%); */
+}
+.card4:before {
+      content: "";
+    display: block;
+    background: hsl(348, 97%, 39%);
+    height: 5px;
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+.card-box {
+text-align: center;
+}
+
+.card-social-icons {
+  vertical-align: bottom;
+}
+.card-social-text {
+  vertical-align:5%;
+}
+
+.card-number {
+  color: var(--title-font);
+  font-size: 3rem;
+  font-weight: 700;
+}
+.card-text {
+font-weight:200;
+letter-spacing: 0.15rem;
+}
+.card-balance {
+
+}
+.card-balance-green {
+  color:hsl(163, 72%, 41%);
+}
+.card-balance-red {
+  color:hsl(356, 69%, 56%);
+}
+
+.card-balance-icons {
+  vertical-align:15%;
+}
+
+.secondTitle {
+  margin-left: 1rem;
+  color: var(--title-font)
+}
+
+
+
+
+
+/* THIRD CONTAINER ---------------------------------------*/
+.thirdContainer {
+  display:grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+.thirdContainer > div {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  display:grid;
+  grid-template-columns: 50% 50%;
+  margin: 1rem;
+}
+.thirdContainer > div:hover {
+  background-color: var(--hover);
+  cursor:pointer;
+}
+/* |< */
+.overview-text, .overview-number {
+display:grid;
+grid-template-columns: auto;
+align-items: center;
+margin: 1rem;
+margin-left: 2rem;
+
+}
+
+/*  >| */
+.overview-icon, .overview-percen {
+display: grid;
+grid-template-columns: auto auto;
+justify-content: flex-end;
+align-items: center;
+margin: 1rem;
+margin-right: 2rem;
+}
+/* ^^ */
+.overview-text, .overview-icon {
+margin-bottom: 0.8rem;
+}
+/* __ */
+.overview-number, .overview-percen {
+  margin-top: 0.8rem;
+}
+
+.overview-balance {
+vertical-align: 10%;
+}
+.overview-number > span {
+    color: var(--title-font);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+
+
+
+div {
+  /* border: solid 1px rgb(0, 48, 49); */
+}
+@media only screen and (max-width: 768px) {
+  .boxSwitchTheme {
+    justify-content: space-between;
+  }
+  .firstContainer {
+    grid-template-columns: 100%;
+  }
+  .secondContainer {
+    grid-template-columns: 100%;
+  }
+  .thirdContainer {
+    grid-template-columns: 100%;
+  }
+  .container {
+      max-width: 100%;
+  }
+  .mainTitle {
+  margin-left: auto;
+  }
+}
+
+
+
+
+/*  */
+
+
+.attribution {
+  text-align: center;
+  margin-left:1rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
